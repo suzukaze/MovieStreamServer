@@ -34,3 +34,6 @@
 /config/master.key
 
 /vendor/bundle
+
+/public/resources/
+
