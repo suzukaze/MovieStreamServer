@@ -7,7 +7,7 @@ Macでのインストール方法を説明します。
 1. Xcode Command Line Toolsをインストールします。
 
   ```
-  xcode-select --install
+  $ xcode-select --install
   ```
   
 2. HomeBrewをインストールします。
@@ -113,7 +113,19 @@ Macでのインストール方法を説明します。
   $ bundle exec rails db:create
   ```
 
-15. サーバーを起動します。
+15. データベースにジャンルと動画情報を入れます。
+
+  ```
+  $ bundle exec rails console
+  $ Genre.create(name: "海")
+  $ Movie.create(title: "波", genre_id: Genre.find_by(name: "海").id, url_string: "wave_in_sea.mp4", thumbnail_url_string: "wave_in_sea_thumbnail.jpg")
+  $ Movie.create(title: "鳥", genre_id: Genre.find_by(name: "海").id, url_string: "bird_in_sea.mp4", thumbnail_url_string: "bird_in_sea_thumbnail.jpg")
+  $ Movie.create(title: "船",  genre_id: Genre.find_by(name: "海").id, url_string: "ships_in_sea.mp4", thumbnail_url_string: "ships_in_sea_thumbnail.jpg")
+  ```
+  
+  Ctrl+Zでrails consoleから抜けます。
+ 
+16. サーバーを起動します。
 
   ```
   $ bundle exec rails server
@@ -121,6 +133,6 @@ Macでのインストール方法を説明します。
   
   停止する場合は、Ctrl+Cです。
  
-16. ブラウザからサーバーにアクセスします。
+17. ブラウザからサーバーにアクセスします。
 
    ブラウザのアドレスに`http://localhost:3000/`と入力します。
