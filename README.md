@@ -1,6 +1,9 @@
-# MovieStreamServer
+# 概要
+本プロジェクトは、以下のポートフォリオ用アプリのサーバーです。
 
-## インストール方法
+- [iOSのSwiftUIアプリ](https://github.com/suzukaze/MovieStream)
+
+# インストール方法
 
 Macでのインストール方法を説明します。
 
